@@ -35,15 +35,18 @@ var specialConsole = (function() {
     }
 
     function writeError(){
-        console.error();
+        var message = formatMessage(arguments);
+        console.error(message);
     }
 
     function writeWarning(){
-        console.warn();
+        var message = formatMessage(arguments);
+        console.warn(message);
     }
 
     function writeInfo(){
-        console.info();
+        var message = formatMessage(arguments);
+        console.info(message);
     }
 
     return {

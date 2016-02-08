@@ -1,0 +1,25 @@
+form {
+    background-color: pink;
+    height: 560px;
+    width: 250px;
+    text-align: center;
+}
+
+legend {
+    position: relative;
+    left: 40px;
+}
+
+#checkbox, #invoice {
+    position: relative;
+    left: -20px;
+    color: black;
+}
+
+span {
+    color: red;
+}
+
+#info {
+    visibility: hidden;
+}

@@ -1,0 +1,38 @@
+body {
+    margin: 0 auto;
+    width: 600px;
+    border: 2px solid black;
+    padding: 0 10px 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#list {
+    margin-top: 20px;
+}
+
+input {
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+main {
+    margin-top: 20px;
+    border: 1px solid black;
+    padding: 0 10px 10px;
+}
+
+section {
+    border: 1px solid black;
+    margin-top: 10px;
+}
+
+span {
+    text-decoration: underline;
+}
+
+#title {
+    margin-top: 20px;
+}

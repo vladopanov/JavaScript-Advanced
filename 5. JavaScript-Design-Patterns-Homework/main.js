@@ -1,7 +1,7 @@
 var TODOListModule = (function () {
     var Container = (function () {
         function Container(listTitle) {
-            if (listTitle === '') {
+            if (!listTitle) {
                 throw new Error('The title must not be empty');
             }
             this._listTitle = listTitle;
@@ -37,7 +37,7 @@ var TODOListModule = (function () {
 
     var Section = (function () {
         function Section (sectionTitle) {
-            if (sectionTitle === '') {
+            if (!sectionTitle) {
                 throw new Error('The title must not be empty');
             }
             this._sectionTitle = sectionTitle;
@@ -74,7 +74,7 @@ var TODOListModule = (function () {
 
     var Item = (function () {
         function Item (itemTitle, parent) {
-            if (itemTitle === '') {
+            if (!itemTitle) {
                 throw new Error('The title must not be empty');
             }
             this._itemTitle = itemTitle;
@@ -94,11 +94,7 @@ var TODOListModule = (function () {
         };
 
         function clickFunction() {
-            if (this.checked) {
-                this.parentNode.style.backgroundColor = '#90EE90';
-            } else {
-                this.parentNode.style.backgroundColor = 'white';
-            }
+            this.parentNode.style.backgroundColor = this.checked ? '#90EE90' : 'white';
         }
 
         return Item;
@@ -117,6 +113,5 @@ function createList() {
     var list = new TODOListModule.Container(title);
     var del = document.getElementById('createList');
     list.addToDOM();
-
     document.body.removeChild(del);
 }

@@ -2,12 +2,16 @@ Array.prototype.flatten = function() {
     var arr = [];
 
     function flattenArr(array) {
-        for (var i = 0; i < array.length; i++) {
-            if (Array.isArray(array[i])) {
-                flattenArr(array[i]);
+        var i = 0,
+            length = array.length;
+
+        for (i; i < length; i += 1) {
+            var el = array[i];
+            if (Array.isArray(el)) {
+                flattenArr(el);
 
             } else {
-                arr.push(array[i]);
+                arr.push(el);
             }
         }
     }

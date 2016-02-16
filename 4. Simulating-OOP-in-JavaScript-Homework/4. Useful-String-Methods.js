@@ -1,17 +1,11 @@
 String.prototype.startsWith = function(substring) {
     var isTrue = this.slice(0, substring.length) === substring;
-    if(isTrue) {
-        return true;
-    }
-    return false;
+    return isTrue;
 };
 
 String.prototype.endsWith = function(substring) {
     var isTrue = this.slice(this.length - substring.length, this.length) === substring;
-    if(isTrue) {
-        return true;
-    }
-    return false;
+    return isTrue;
 };
 
 String.prototype.left = function(count) {
@@ -43,8 +37,9 @@ String.prototype.padRight = function(count, character) {
 };
 
 String.prototype.repeat = function(count) {
-    var string = '';
-    for (var i = 0; i < count; i++) {
+    var string = '',
+        i = 0;
+    for (i; i < count; i++) {
         string += this;
     }
 
